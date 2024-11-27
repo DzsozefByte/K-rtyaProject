@@ -1,0 +1,67 @@
+body {
+    background-color: #ff7999;
+    opacity: 0.8;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ff7999 22px ), repeating-linear-gradient( #ff3b4055, #ff3b40 );
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0 4px 6px rgba(10, 0, 0, 0.5);
+}
+
+.jatek {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.kartya {
+    width: 150px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: transparent;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(10, 0, 0, 0.25);
+}
+
+.kartya.fordult {
+    background-color: #ffd7d3;
+    color:#ff0000
+}
+
+.kartya::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b03131;
+    border-radius: 8px;
+
+}
+
+.kartya.fordult::before {
+    background-color: transparent;
+}
