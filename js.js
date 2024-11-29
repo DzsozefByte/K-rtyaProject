@@ -24,7 +24,7 @@ function kezd() {
 }
 
 function fordul(kartya) {
-    if (forditott.length === 2 || kartya.classList.contains('fordult')) return;
+    if (forditott.length == 2 || kartya.classList.contains('fordult')) return;
 
     kartya.classList.add('fordult');
     kartya.textContent = kartya.dataset.letter;

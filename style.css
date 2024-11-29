@@ -30,38 +30,32 @@ header {
     margin-top: 20px;
 }
 
-.kartya {
+#kartya {
     width: 150px;
     height: 200px;
-    background-color: #fff;
     border-radius: 8px;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 36px;
-    color: transparent;
+    background-color: transparent;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(10, 0, 0, 0.25);
+    perspective: 1000px;
 }
-
-.kartya.fordult {
-    background-color: #ffd7d3;
-    color:#ff0000
+#kartya-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
-
-.kartya::before {
-    content: '';
+#kartya-eleje, #kartya-hata {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #b03131;
-    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 
-}
-
-.kartya.fordult::before {
-    background-color: transparent;
-}
