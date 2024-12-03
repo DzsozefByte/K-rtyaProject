@@ -22,7 +22,7 @@ header {
     text-shadow: 0 4px 6px rgba(10, 0, 0, 0.5);
 }
 
-.jatek {
+#jatek {
     display: grid;
     grid-template-columns: repeat(4, 150px);
     gap: 10px;
@@ -30,7 +30,7 @@ header {
     margin-top: 20px;
 }
 
-#kartya {
+.kartya {
     width: 150px;
     height: 200px;
     border-radius: 8px;
@@ -43,7 +43,7 @@ header {
     box-shadow: 0 4px 6px rgba(10, 0, 0, 0.25);
     perspective: 1000px;
 }
-#kartya-inner{
+.kartya-inner{
     position: relative;
     width: 100%;
     height: 100%;
@@ -51,11 +51,19 @@ header {
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-#kartya-eleje, #kartya-hata {
+.kartya-eleje, .kartya-hata {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
+.kartya-eleje{
+    background: dodgerblue;
+    color: black;
+}  
+.kartya-hata{
+    background:red;
+    color: white;
+    transform: rotateY(180deg) scaleX(-1);
+}  
 
